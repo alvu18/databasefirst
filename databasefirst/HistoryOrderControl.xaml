@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="databasefirst.HistoryOrderControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:databasefirst"
+             mc:Ignorable="d" 
+           d:DesignHeight="351" d:DesignWidth="676" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#1b263b">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="306"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid IsReadOnly="True" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Style="{DynamicResource DataGridStyle}" CellStyle="{DynamicResource DataGridCellStyle1}" RowHeaderStyle="{DynamicResource DataGridRowHeaderStyle1 }"  Margin="20 5 20 5" Grid.Row="0"  x:Name="datagrid1"  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Издание" Binding="{Binding NameEditorialOffice}" Width="*"/>
+                <DataGridTextColumn Header="Книга" Binding="{Binding NameBook}"  Width="*"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding EmailClient}"  Width="*"/>
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding WorkerFullName}"  Width="*"/>
+                <DataGridTextColumn Header="Цена"  Binding="{Binding TotalPrice, StringFormat={}{0:F2} руб}" Width="*" />
+                <DataGridTextColumn Header="Дата"  Binding="{Binding DateOrder}" Width="*" />
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

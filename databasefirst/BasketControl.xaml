@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="databasefirst.BasketControl"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:databasefirst"
+             mc:Ignorable="d" 
+             d:DesignHeight="351" d:DesignWidth="676" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#1b263b">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="261"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <DataGrid SelectionMode="Single"  SelectedValuePath="" CanUserAddRows="False" FontSize="12"  IsReadOnly="True" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Style="{DynamicResource DataGridStyle}" CellStyle="{DynamicResource DataGridCellStyle1}" RowHeaderStyle="{DynamicResource DataGridRowHeaderStyle1 }"  Margin="20 5 20 60" Grid.Row="0"  x:Name="DataGridBasket"  AutoGenerateColumns="False" AddingNewItem="DataGridBasket_AddingNewItem"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название Книги" Binding="{Binding NameBook}"  Width="0.4*" />
+                <DataGridTextColumn Header="Автор"  Width="0.4*" Binding="{Binding FullNameAuthor}"/>
+               
+                <DataGridTextColumn Header="Количество"   Width="0.2*" Binding="{Binding CountBook}"/>
+                <DataGridTextColumn Header="Цена"   Width="0.1*" Binding="{Binding PriceBook}"/>
+
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel  VerticalAlignment="Bottom" Grid.Row="0" Margin="0 0 0 0" Orientation="Horizontal">
+
+            <Button HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}" x:Name="AddButton" Content="Создать покупку" Height="35" Width="200" Margin="20 12.5 0 12.5" Click="AddButton_Click" />
+            <StackPanel Grid.Row="0" HorizontalAlignment="Left" Margin="60 0 0 0" Orientation="Horizontal">
+                <ComboBox Margin="0 10 0 10" Height="25" Width="150"  x:Name="ComboClient"  DisplayMemberPath="SurnameClient" SelectedValuePath="IdClient" SelectionChanged="ComboClient_SelectionChanged" />
+                <Image Margin="10 10 0 10" Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-client.png"   Width="25" Height="25" Stretch="Fill"  />
+            </StackPanel>
+            <Label Margin="40 0 0 0" Content="Сумма:" Style="{StaticResource LabelMenu}" VerticalAlignment="Center" />
+            <Label Content="0" FontSize="20" Style="{StaticResource LabelMenu}" VerticalAlignment="Center" x:Name="SumLabel" />
+            <Label Content="руб." Style="{StaticResource LabelMenu}" VerticalAlignment="Center" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal"  Name="InputPanel" Visibility="Hidden"  >
+            <StackPanel HorizontalAlignment="Left" Margin="20 0 0 0">
+                <ComboBox Margin="0 10 0 10" Height="25" Width="150"  x:Name="ComboBook"  DisplayMemberPath="NameBook" SelectedValuePath="IdBook" SelectionChanged="ComboBook_SelectionChanged"  />
+                <xctk:IntegerUpDown Background="#1c3a5b" BorderBrush="#FF0D1B2A" Foreground="#e0e1dd" Margin="0 10 0 10" Height="25" Width="150" Name="myUpDownControl" PreviewTextInput="myUpDownControl_PreviewTextInput" />
+            </StackPanel>
+            
+           
+            <StackPanel Margin="11.25 0 0 0">
+                <Image Margin="0 10 0 10" Style="{StaticResource AcceptButton}" Width="25" Height="25" Stretch="Fill" MouseDown="Image_MouseDown_Accept" Name="AcceptButton"/>
+                <Image Margin="0 10 0 10" Style="{StaticResource CancelRedButton}"  Width="25" Height="25" Stretch="Fill" MouseDown="Image_MouseDown_Cancel" Name="CancelRedButton"/>
+            </StackPanel>
+            
+            <StackPanel  Margin="300 0 0 0" >
+                <Button x:Name="SuccessButton" Style="{StaticResource ButtonStyle}" Content="Оплатить" Height="25" Width="150" Margin="0 10 0 10" Click="SuccessButton_Click"  />
+                <Button x:Name="CancelButton" Style="{StaticResource ButtonStyle}" Content="Отмена" Height="25" Width="150" Margin="0 10 0 10" Click="CancelButton_Click"  />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

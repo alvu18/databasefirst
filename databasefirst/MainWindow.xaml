@@ -1,0 +1,113 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:databasefirst"
+        xmlns:Models="clr-namespace:databasefirst.Models" x:Class="databasefirst.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="456" Width="880" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"  Icon="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\library_books_school_shelving_rack_furniture_icon_209277.png" ResizeMode="NoResize">
+
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+
+
+    <Grid Background="#1b263b">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="676.385"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition   Height="25"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="306"/>
+            <RowDefinition Height="45"/>
+
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Grid.ColumnSpan="2" Fill="#0d1b2a" MouseDown="Rectangle_MouseDown"></Rectangle>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Margin="0,0,5,0">
+            <Image x:Name="CollapseMenuButton" Style="{StaticResource CollapseButton}" MouseDown="CollapseMenuButton_MouseDown"></Image>
+            <Image x:Name="CloseMenuButton"    Style="{StaticResource CancelButton}" MouseDown="CloseMenuButton_MouseDown"></Image>
+
+
+        </StackPanel>
+        <Label Grid.Row="1" FontSize="26" MaxWidth="100" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="#e0e1dd" FontFamily="Cooper Black" >Menu</Label>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="WorkerLabel" Style="{StaticResource LabelMenu}" Margin="0 20 20 0"/>
+        <Menu Background="#0d1b2a" Grid.Row="2" HorizontalAlignment="Center" Width="auto" Height="auto" VerticalAlignment="Center">
+
+            <MenuItem  Header="Home" Template="{StaticResource MenuItm }" Click="MenuItem_Click_1" >
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-house.png"
+                                />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem  Header="Purchase" Template="{StaticResource Menu_SubMenu_Template }" >
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-basket.png"
+                                />
+
+                </MenuItem.Icon>
+                <MenuItem Click="MenuItem_Click_1" Style="{StaticResource submenu_item}" Header="Оформить">
+
+                </MenuItem>
+                <MenuItem Click="MenuItem_Click_1" Style="{StaticResource submenu_item}" Header="История покупок">
+
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem  Header="Charts" Template="{StaticResource Menu_SubMenu_Template }" >
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-chart.png"
+                                />
+                </MenuItem.Icon>
+                <MenuItem Click="MenuItem_Click_1" Style="{StaticResource submenu_item}" Header="График 1"/>
+                <MenuItem Click="MenuItem_Click_1" Style="{StaticResource submenu_item}" Header="График 2"/>
+                <MenuItem Click="MenuItem_Click_1" Style="{StaticResource submenu_item}" Header="График 3"/>
+
+            </MenuItem>
+
+            <MenuItem Click="MenuItem_Click_1"  Header="Client" Template="{StaticResource MenuItm }" >
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-client.png"
+                                />
+                </MenuItem.Icon>
+            </MenuItem>
+
+            <MenuItem Click="MenuItem_Click_1" Header="Employee" Template="{StaticResource MenuItm }" >
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-employer.png"
+                                />
+                </MenuItem.Icon>
+            </MenuItem>
+
+            <MenuItem  Header="Exit" Template="{StaticResource MenuItm }" Click="MenuItem_Click" >
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-door-closed.png"
+                                />
+                </MenuItem.Icon>
+            </MenuItem>
+
+
+
+
+
+
+        </Menu>
+
+        <ContentControl  x:Name="contentControl" Grid.Column="2"  Grid.Row="2" Grid.RowSpan="2" />
+
+
+
+
+
+
+    </Grid>
+</Window>

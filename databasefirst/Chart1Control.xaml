@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="databasefirst.Chart1Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:databasefirst"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="351" d:DesignWidth="676" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#1b263b" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="306"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" VerticalAlignment="Top" Margin="0 10 0 0"  HorizontalAlignment="Center" Foreground="White" FontFamily="Cooper Black" FontSize="22" Content="Динамика выручки"/>
+        <StackPanel Grid.Row="0" Margin="0 15 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+            <Label Content="От" Style="{StaticResource LabelMenu}"/>
+            <DatePicker  Name="StartDate" SelectedDateChanged="StartDate_SelectedDateChanged"  />
+            <Label Content="До"  Style="{StaticResource LabelMenu}"/>
+            <DatePicker  Name="EndDate" SelectedDateChanged="StartDate_SelectedDateChanged"/>
+            <Button Margin="20 0 0 0" Width="100" x:Name="ResetButton" Content="Сбросить" Style="{StaticResource ButtonStyle}" Click="ResetButton_Click"/>
+        </StackPanel>
+        <lvc:CartesianChart  Margin="0 40 0 20" Grid.Row="1"  x:Name="chart" LegendLocation="Right" Foreground="White" FontSize="10" FontFamily="Cooper Black">
+    
+        </lvc:CartesianChart>
+
+    </Grid>
+
+</UserControl>
