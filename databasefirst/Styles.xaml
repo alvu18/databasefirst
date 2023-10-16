@@ -41,11 +41,11 @@
 
     
     <Style x:Key="CollapseButton" TargetType="{x:Type Image}"   BasedOn="{StaticResource MenuButton}">
-        <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\collapse_light.png"/>
+        <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\collapse_light.png"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding IsMouseOver, ElementName=CollapseMenuButton}"
             Value="True">
-                <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\collapse_white.png"/>
+                <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\collapse_white.png"/>
             </DataTrigger>
 
         </Style.Triggers>
@@ -53,11 +53,11 @@
     </Style>
 
     <Style x:Key="AcceptButton" TargetType="{x:Type Image}"  >
-        <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\vcsnormal_93488.png"/>
+        <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\vcsnormal_93488.png"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding IsMouseOver, ElementName=AcceptButton}"
             Value="True">
-                <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\vcsnormal_93488_light.png"/>
+                <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\vcsnormal_93488_light.png"/>
             </DataTrigger>
 
         </Style.Triggers>
@@ -365,11 +365,11 @@
         </Style.Triggers>
     </Style>
     <Style x:Key="CancelRedButton" TargetType="{x:Type Image}"   >
-        <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\ic_cancel_128_28318.png"/>
+        <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\ic_cancel_128_28318.png"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding IsMouseOver, ElementName=CancelRedButton}"
             Value="True">
-                <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\ic_cancel_128_28318_light.png"/>
+                <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\ic_cancel_128_28318_light.png"/>
             </DataTrigger>
 
         </Style.Triggers>
@@ -380,11 +380,11 @@
 
 
     <Style x:Key="ExtendButton" TargetType="{x:Type Image}"  BasedOn="{StaticResource MenuButton}">
-        <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\rectangle_light.png"/>
+        <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\rectangle_light.png"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding IsMouseOver, ElementName=ExtendMenuButton}"
             Value="True">
-                <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\rectangle_white.png"/>
+                <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\rectangle_white.png"/>
             </DataTrigger>
 
         </Style.Triggers>
@@ -394,11 +394,11 @@
 
 
     <Style x:Key="CancelButton" TargetType="{x:Type Image}"  BasedOn="{StaticResource MenuButton}">
-        <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\cancel_light.png"/>
+        <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\cancel_light.png"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseMenuButton}"
             Value="True">
-                <Setter Property="Source" Value="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\cancel_white.png"/>
+                <Setter Property="Source" Value="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\cancel_white.png"/>
             </DataTrigger>
 
         </Style.Triggers>
@@ -696,7 +696,7 @@
 
                 <!--// Right Arrow Icon //-->
 
-                <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\Polygon 2.png"
+                <Image Source="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\menu_logo\Polygon 2.png"
                        Margin="0 10 10 0"
                         Width="12" Height="12" 
                        HorizontalAlignment="Right"

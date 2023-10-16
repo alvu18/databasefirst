@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:databasefirst"
         xmlns:Models="clr-namespace:databasefirst.Models" x:Class="databasefirst.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="456" Width="880" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"  Icon="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\library_books_school_shelving_rack_furniture_icon_209277.png" ResizeMode="NoResize">
+        Title="MainWindow" Height="456" Width="880" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"  Icon="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\library_books_school_shelving_rack_furniture_icon_209277.png" ResizeMode="NoResize">
 
     <Window.Resources>
 
@@ -45,13 +45,13 @@
 
             <MenuItem  Header="Home" Template="{StaticResource MenuItm }" Click="MenuItem_Click_1" >
                 <MenuItem.Icon>
-                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-house.png"
+                    <Image Source="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-house.png"
                                 />
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem  Header="Purchase" Template="{StaticResource Menu_SubMenu_Template }" >
                 <MenuItem.Icon>
-                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-basket.png"
+                    <Image Source="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-basket.png"
                                 />
 
                 </MenuItem.Icon>
@@ -65,7 +65,7 @@
 
             <MenuItem  Header="Charts" Template="{StaticResource Menu_SubMenu_Template }" >
                 <MenuItem.Icon>
-                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-chart.png"
+                    <Image Source="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-chart.png"
                                 />
                 </MenuItem.Icon>
                 <MenuItem Click="MenuItem_Click_1" Style="{StaticResource submenu_item}" Header="График 1"/>
@@ -76,21 +76,21 @@
 
             <MenuItem Click="MenuItem_Click_1"  Header="Client" Template="{StaticResource MenuItm }" >
                 <MenuItem.Icon>
-                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-client.png"
+                    <Image Source="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-client.png"
                                 />
                 </MenuItem.Icon>
             </MenuItem>
 
             <MenuItem Click="MenuItem_Click_1" Header="Employee" Template="{StaticResource MenuItm }" >
                 <MenuItem.Icon>
-                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-employer.png"
+                    <Image Source="C:\Users\Artom\\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-employer.png"
                                 />
                 </MenuItem.Icon>
             </MenuItem>
 
             <MenuItem  Header="Exit" Template="{StaticResource MenuItm }" Click="MenuItem_Click" >
                 <MenuItem.Icon>
-                    <Image Source="C:\Users\Артём\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-door-closed.png"
+                    <Image Source="C:\Users\Artom\source\repos\databasefirst\databasefirst\Assets\menu_logo\icons8-door-closed.png"
                                 />
                 </MenuItem.Icon>
             </MenuItem>
