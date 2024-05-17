@@ -588,12 +588,12 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
-    
 
-    
-    
 
+
+
+
+    <!-- Взял-->
     <ControlTemplate x:Key="MenuItm" TargetType="MenuItem">
         <Border x:Name="border"
                 Background="#0d1b2a"              
@@ -653,7 +653,7 @@
     </ControlTemplate>
 
 
-
+    <!-- Взял-->
     <ControlTemplate x:Key="Menu_SubMenu_Template"
                      TargetType="{x:Type MenuItem}">
 
@@ -775,17 +775,14 @@
 
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
+ <!-- Взял-->
     <Style TargetType="MenuItem" x:Key="submenu_item">
         <Setter Property="Height" Value="51"/>
-    
-
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="MenuItem" x:Name="TemplateSubMenu">
                     <Border x:Name="border_sub" BorderBrush="#1c3a5b" Background="#1c3a5b">
                         <Grid>
-
                             <ContentPresenter x:Name="SubText" Content="{TemplateBinding Header}" 
                                     Margin="5 2 2 5"
                                   TextBlock.Foreground="#e0e1dd"
@@ -794,7 +791,6 @@
                                   HorizontalAlignment="Left"
                                   RecognizesAccessKey="True"                                 
                                   VerticalAlignment="Center" />
-
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -803,29 +799,16 @@
                             <Setter TargetName="border_sub" Property="Background" Value="#275180"/>
                             <Setter TargetName="SubText" Property="TextBlock.Foreground" Value="White"/>
                         </Trigger>
-                        
                     </ControlTemplate.Triggers>
-
                 </ControlTemplate>
-                
-                
             </Setter.Value>
-            
         </Setter>
-        
-        
-        
-        
-        
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#1c3a5b"/>
                 <Setter Property="BorderBrush" Value="#1c3a5b"/>
-
             </Trigger>
-            
         </Style.Triggers>
-
     </Style>
 
 
